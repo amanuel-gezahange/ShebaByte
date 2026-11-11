@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body { @apply bg-white text-slate-600 antialiased; }
+:focus-visible { @apply outline-2 outline-offset-2 outline-blue-600; }
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 disabled:opacity-60;
+}
+.btn-outline { @apply border border-slate-300 bg-white text-slate-800 shadow-none hover:bg-slate-50; }
+.input {
+  @apply w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 outline-none transition placeholder:text-slate-500 focus:border-blue-600 focus:ring-4 focus:ring-blue-600/10;
+}
+.eyebrow { @apply mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-blue-600; }
